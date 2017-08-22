@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/index.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>Wedding App</title>
@@ -20,11 +21,18 @@
 			<ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
-				<li><a href="#0">Sign Up</a></li>
-                <li><a href="#0">Sign In</a></li>
+				<li><button onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign Up</button>
+					
+					<!-- <a href="#0">Sign Up</a> -->
+				</li>
+                <li><button onclick="document.getElementById('signin').style.display='block'" style="width:auto;">Sign In</button>
+					<!-- <a href="#0">Sign In</a> -->
+				</li>
 			</ul>
 		</nav> <!-- .cd-primary-nav -->
 	</header>
+
+	
 
 	<section class="cd-hero">
 		<ul class="cd-hero-slider autoplay">
@@ -111,19 +119,57 @@
 
 	</section> <!-- .cd-hero -->
 
+	<div id="signin" class="modal">
+			<span onclick="document.getElementById('signin').style.display='none'" class="close" title="Close Modal">×</span>
+			<form class="modal-content animate" method="post" action="/signin">
+				<div class="container">
+					<label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="password" required>
+					<input type="checkbox" checked="checked"> Remember me
+					<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+					<div class="clearfix">
+						<button type="submit" class="signupbtn">Sign Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="signup" class="modal">
+			<span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">×</span>
+			<form class="modal-content animate" method="post" action="/signup">
+				<div class="container">
+					<label for="firstname"><b>Firstname</b></label>
+					<input name="firstname" type="text" />
+					<label for="lastname"><b>Lastname</b></label>
+					<input name="lastname" type="text" />
+					<label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="password" required>
+					<input type="checkbox" checked="checked"> Remember me
+					<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+					<div class="clearfix">
+						<button type="submit" class="signupbtn">Sign Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
     <div id="about-us">
 	    <main class="cd-main-content">
 
 		    <p>
-                Something Blue is your go-to prestige wedding planner. 
+                Something Blue is your prestigious wedding planner. 
 	    	</p>
 
 	    	<p>
-	    		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit beatae rerum ratione, voluptates nisi magni delectus ab, eaque atque iste. Molestias incidunt nemo veniam alias nam nisi distinctio optio error architecto odit! Illo dicta nulla fugiat distinctio laudantium, corrupti eum unde.
+	    		Dolla dolla bill, y'all. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit beatae rerum ratione, voluptates nisi magni delectus ab, eaque atque iste. Molestias incidunt nemo veniam alias nam nisi distinctio optio error architecto odit! Illo dicta nulla fugiat distinctio laudantium, corrupti eum unde.
 	    		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veniam quisquam, rem illum dicta cumque, voluptate fugiat impedit beatae rerum ratione, voluptates nisi magni delectus ab, eaque atque iste. Molestias incidunt nemo veniam alias nam nisi distinctio optio error architecto odit! Illo dicta nulla fugiat distinctio laudantium, corrupti eum unde.
 	    	</p>
         </main> <!-- .cd-main-content -->
-    </div>
+	</div>
+	
 	
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
