@@ -2,6 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
     app.get("/package", function(req, res) {
+        console.log('something');
         db.Packages.findAll({})
         .then(function(results) {
             // console.log(results);
