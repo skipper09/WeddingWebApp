@@ -1,12 +1,18 @@
+
+<form method="POST" action="/packages/create">
 {{#each vendor}}
-<div class="provide-card">
+<div class="provider-card">
     <br>
+    
     <h2>{{this.name}}</h3>
     <h4>Price: {{this.price}}</h4>
     <h4>{{this.capacity}}</h4>
     <h4>Description: {{this.description}}</h4>
     <h4>Address: {{this.address}}</h4>
     <br>
-    <input type="checkbox"> 
+    <input type="checkbox" id={{this.id}} value={{this.type}}>
 </div>
 {{/each}}
+
+<input id="providerSubmit" type="submit">
+</form>

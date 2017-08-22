@@ -23,8 +23,8 @@ app.use(express.static("./app/public"));
 // require routes here
 
 require("./app/routes/api-routes.js")(app);
-// var apiRoutes = 
 require("./app/routes/html-routes.js")(app);
+require("./app/routes/package-routes.js")(app);
 
 // app.use("/vendors", apiRoutes);
 
