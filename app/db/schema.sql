@@ -3,7 +3,7 @@ USE providers_db;
 
 CREATE TABLE providers (
 ID INTEGER AUTO_INCREMENT,
-img LONGBLOB NOT NULL,
+img VARCHAR(999) NOT NULL,
 name VARCHAR(100) not null,
 address VARCHAR(100) not null,
 description VARCHAR(300) not null,

@@ -3,6 +3,7 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     app = express(),
     methodOverride = require("method-override"),
+    handlebars = require('handlebars'),
     PORT = process.env.PORT || 8080;
 
 var db = require("./app/models");
@@ -28,8 +29,21 @@ require("./app/routes/package-routes.js")(app);
 
 // app.use("/vendors", apiRoutes);
 
-//Sync models with the database and start the Express app
+handlebars.registerHelper('if_eq', function(a, b, opts) {
+    if(a == b)
+        return opts.fn(this);
+    else
+        return opts.inverse(this);
+});
 
+handlebars.registerHelper('if_ls', function(a, b, opts) {
+   if(a < b)
+       return opts.fn(this);
+   else
+       return opts.inverse(this);
+});
+
+//Sync models with the database and start the Express app
 db.sequelize.sync({force: false}).then(function(){
     app.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);
