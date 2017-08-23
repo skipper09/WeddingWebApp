@@ -1,6 +1,6 @@
-//For saving user profiles into the database
+// For saving user profiles into the database
 
-//NEEDS TO BE COMPLETED
+// NEEDS TO BE COMPLETED
 
 // module.exports = function(sequelize, DataTypes) {
 //     var Users = sequelize.define("tablename", {
@@ -10,8 +10,8 @@
 //             primaryKey: true
 //         },
 //         name: {
-//             type: Sequelize.STRING
 //         },,
+//             type: Sequelize.STRING
 //         email: {
 //             type: Sequelize.STRING
 //         },
