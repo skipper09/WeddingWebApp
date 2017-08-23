@@ -1,12 +1,11 @@
 var db = require("../models");
 
 module.exports = function (app) {
+
     app.get("/package", function (req, res) {
         console.log('something');
         db.Packages.findAll({})
             .then(function (results) {
-                console.log(results);
-                // res.json(results);
                 var hbsObject = {
                     package: results
                 };
@@ -26,10 +25,7 @@ module.exports = function (app) {
             florist: req.body.florist
         })
             .then(function (result) {
-                // log the result to our terminal/bash window
-                console.log(result);
-                // redirect
-                  res.redirect("/package");
+                res.redirect("/package");
             });
     });
 

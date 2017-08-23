@@ -1,16 +1,6 @@
 var db = require("../models");
 
 module.exports = function (app) {
-    // app.get("/api/providers", function(req, res) {
-    //     db.Providers.findAll({})
-    //     .then(function(results) {
-    //         res.json(results);
-    //         var hbsObject = {
-    //             eachProvider: results
-    //           };
-    //         res.render("providershbs", hbsObject);
-    //     });
-    // });
 
     app.get("/vendors", function (req, res) {
         db.Providers.findAll({})
@@ -70,21 +60,5 @@ module.exports = function (app) {
 
         }
     });
-
-    // app.post("/packages/create", function(req, res) {
-    //         // edited burger create to add in a burger_name
-    //         db.Burger.create({
-    //           burger_name: req.body.burger_name
-    //         })
-    //         // pass the result of our call
-    //         .then(function(dbBurger) {
-    //           // log the result to our terminal/bash window
-    //           console.log(dbBurger);
-    //           // redirect
-    //           res.redirect("/");
-    //         });
-    //       })
-
-
 };
 
