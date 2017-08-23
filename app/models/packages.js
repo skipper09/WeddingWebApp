@@ -17,13 +17,16 @@ module.exports = function(sequelize, DataTypes) {
         photographers: {
             type: DataTypes.STRING
         },
-        cake: {
-            type: DataTypes.STRING
-        },
-        dj: {
+        music: {
             type: DataTypes.STRING
         },
         florist: {
+            type: DataTypes.STRING
+        },
+        caterers: {
+            type: DataTypes.STRING
+        },
+        cake: {
             type: DataTypes.STRING
         }
     }, {

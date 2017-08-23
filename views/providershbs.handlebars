@@ -1,120 +1,133 @@
- {{!--
-<form method="POST" action="/packages/create"> --}}
-    <div class="row">
-        <div class="col-sm-10">
+<form method="POST" action="/package/create">
+        <div class="row" id="providers-row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="well well-lg">
+                    <div class="row">
+                        <h1>Venues</h1>
+                        {{#each vendor}} {{#if_eq this.type 'venue'}}
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="{{this.img}}" alt="{{this.img}}">
+                                <div class="caption">
+                                    <h3>{{this.name}}</h3>
+                                    <h4>Price: {{this.price}}</h4>
+                                    <h4>{{this.capacity}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h4>{{this.address}}</h4>
+                                    <br>
+                                    <input type="radio" name="venue" value="{{this.name}}">
+                                </div>
+                            </div>
+                        </div>
+                        {{/if_eq}} {{/each}}
 
-            <div class="well well-lg">
-                <h1>Venues</h1>
-                {{#each vendor}} {{#if_eq this.type 'venue'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
+                    </div>
                 </div>
-                {{/if_eq}} {{/each}}
-            </div>
 
-            <div class="well well-lg">
-                <h1>Photographers</h1>
-                {{#each vendor}} {{#if_eq this.type 'photographers'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
+                <div class="well well-lg">
+                    <div class="row">
+                        <h1>Photographers</h1>
+                        {{#each vendor}} {{#if_eq this.type 'photographers'}}
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="{{this.img}}" alt="{{this.img}}">
+                                <div class="caption">
+                                    <h3>{{this.name}}</h3>
+                                    <h4>Price: {{this.price}}</h4>
+                                    <h4>{{this.capacity}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h4>{{this.address}}</h4>
+                                    <br>
+                                    <input type="radio" name="photographers" value="{{this.name}}">
+                                </div>
+                            </div>
+                        </div>
+                        {{/if_eq}} {{/each}}
+                    </div>
                 </div>
-                {{/if_eq}} {{/each}}
-            </div>
 
-            <div class="well well-lg">
-                <h1>Bands</h1>
-                {{#each vendor}} {{#if_eq this.type 'music'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
+                <div class="well well-lg">
+                    <div class="row">
+                        <h1>Bands</h1>
+                        {{#each vendor}} {{#if_eq this.type 'music'}}
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
+                                <h3>{{this.name}}</h3>
+                                <h4>Price: {{this.price}}</h4>
+                                <h4>{{this.capacity}}</h4>
+                                <h4>{{this.description}}</h4>
+                                <h4>{{this.address}}</h4>
+                                <br>
+                                <input type="radio" name="music" value="{{this.name}}">
+                            </div>
+                        </div>
+                        {{/if_eq}} {{/each}}
+                    </div>
                 </div>
-                {{/if_eq}} {{/each}}
-            </div>
 
-            <div class="well well-lg">
-                <h1>Florists</h1>
-                {{#each vendor}} {{#if_eq this.type 'florist'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
+                <div class="well well-lg">
+                    <div class="row">
+                        <h1>Florists</h1>
+                        {{#each vendor}} {{#if_eq this.type 'florist'}}
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
+                                <h3>{{this.name}}</h3>
+                                <h4>Price: {{this.price}}</h4>
+                                <h4>{{this.capacity}}</h4>
+                                <h4>{{this.description}}</h4>
+                                <h4>{{this.address}}</h4>
+                                <br>
+                                <input type="radio" name="florist" value="{{this.name}}">
+                            </div>
+                        </div>
+                        {{/if_eq}} {{/each}}
+                    </div>
                 </div>
-                {{/if_eq}} {{/each}}
-            </div>
 
-            <div class="well well-lg">
-                <h1>DJs</h1>
-                {{#each vendor}} {{#if_eq this.type 'dj'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
+                <div class="well well-lg">
+                    <div class="row">
+                        <h1>Caterers</h1>
+                        {{#each vendor}} {{#if_eq this.type 'caterers'}}
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
+                                <h3>{{this.name}}</h3>
+                                <h4>Price: {{this.price}}</h4>
+                                <h4>{{this.capacity}}</h4>
+                                <h4>{{this.description}}</h4>
+                                <h4>{{this.address}}</h4>
+                                <br>
+                                <input type="radio" name="caterers" value="{{this.name}}">
+                            </div>
+                        </div>
+                        {{/if_eq}} {{/each}}
+                    </div>
                 </div>
-                {{/if_eq}} {{/each}}
-            </div>
 
-            <div class="well well-lg">
-                <h1>Caterers</h1>
-                {{#each vendor}} {{#if_eq this.type 'caterers'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
+                <div class="well well-lg">
+                    <div class="row">
+                        <h1>Cake</h1>
+                        {{#each vendor}} {{#if_eq this.type 'cake'}}
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
+                                <h3>{{this.name}}</h3>
+                                <h4>Price: {{this.price}}</h4>
+                                <h4>{{this.capacity}}</h4>
+                                <h4>{{this.description}}</h4>
+                                <h4>{{this.address}}</h4>
+                                <br>
+                                <input type="radio" name="cake" value="{{this.name}}">
+                            </div>
+                        </div>
+                        {{/if_eq}} {{/each}}
+                    </div>
                 </div>
-                {{/if_eq}} {{/each}}
-            </div>
-
-            <div class="well well-lg">
-                <h1>Cake</h1>
-                {{#each vendor}} {{#if_eq this.type 'cake'}}
-                <div class="thumbnail">
-                    <img src="{{this.img}}" alt="{{this.img}}" width="200px">
-                    <h2>{{this.name}}</h2>
-                    <h4>Price: {{this.price}}</h4>
-                    <h4>{{this.capacity}}</h4>
-                    <h4>Description: {{this.description}}</h4>
-                    <h4>Address: {{this.address}}</h4>
-                    <br>
-                    <input type="checkbox" id={{this.id}} value={{this.type}}>
-                </div>
-                {{/if_eq}} {{/each}}
-            </div>
-
-            <input id="providerSubmit" type="submit"> {{!-- </form> --}}
-</div>
-</div>
+                <input id="providerSubmit" type="submit">
+    </form>
+    </div>
+    <div class="col-sm-1"></div>
+    </div>
