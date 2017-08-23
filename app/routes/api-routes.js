@@ -60,5 +60,16 @@ module.exports = function (app) {
 
         }
     });
+
+    app.get("/profile", function (req, res) {
+        // console.log('something');
+        db.user.findAll({})
+            .then(function (results) {
+                var hbsObject = {
+                    user: results
+                };
+                res.render("profile", hbsObject);
+            });
+    });
 };
 

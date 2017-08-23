@@ -17,7 +17,7 @@ module.exports = function(app, passport) {
 
     // POST request for /signin -- goes to the passport local-signin
     app.post('/signin', passport.authenticate('local-signin', {
-        successRedirect: '/vendors',
+        successRedirect: '/profile',
         failureRedirect: '/signin'
     }));
 
