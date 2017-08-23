@@ -1,34 +1,34 @@
 //For grabbing providers from the database
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, Sequelize) {
     var Providers = sequelize.define("Providers", {
         id: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
         img: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         name: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         address: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         description: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         type: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         capacity: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         budget: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         price: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         }
     },{
         timestamps: false
