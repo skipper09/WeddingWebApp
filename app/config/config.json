@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "@bb33449966lp",
-    "database": "providers_db",
+    "password": "success123",
+    "database": "CustomerSignIn",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
