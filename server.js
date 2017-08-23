@@ -54,6 +54,10 @@ handlebars.registerHelper('if_ls', function(a, b, opts) {
        return opts.inverse(this);
 });
 
+handlebars.registerHelper("capitalizeString", function (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+})
+
 //Sync models with the database and start the Express app
 db.sequelize.sync({force: false}).then(function(){
     app.listen(PORT, function() {
