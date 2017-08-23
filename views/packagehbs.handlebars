@@ -1,20 +1,108 @@
+<div class="container">
 <div class="row" id="packages-row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-10">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
         <h2 class="text-center">Your Package</h2>
-        {{#each package}}
-        <div class="package-card">
-            <br>
-            <h3>{{this.venue}}</h3>
-            <h3>{{this.photographers}}</h3>
-            <h3>{{this.music}}</h3>
-            <h3>{{this.florists}}</h3>
-            <h3>{{this.caterers}}</h3>
-            <h3>{{this.cake}}</h3>
-            <br>
-        </div>
+        <br>
+        {{#each package}} 
+            {{#if this.venue}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{this.venue}}</h4>
+                ...
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.photographers}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{this.photographers}}</h4>
+                ...
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.music}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{this.music}}</h4>
+                ...
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.florists}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{this.florists}}</h4>
+                ...
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.caterers}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{this.caterers}}</h4>
+                ...
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.cake}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{this.cake}}</h4>
+                ...
+            </div>
+            </div>
+            {{/if}}
         {{/each}}
+        <div class="center">
+        <button>Contact vendors</button>
+        <button>Update</button>
+        <button>Delete this package</button>
+        </div>
+
+        
+        
+        
+        
+        {{!-- {{#if this.venue}}
+        <h3>Venue: {{this.venue}}</h3>{{/if}} {{#if this.photographers}}
+        <h3>Photography: {{this.photographers}}</h3>{{/if}} {{#if this.music}}
+        <h3>Music: {{this.music}}</h3>{{/if}} {{#if this.florists}}
+        <h3>Floral: {{this.florists}}</h3>{{/if}} {{#if this.caterers}}
+        <h3>Caterer: {{this.caterers}}</h3>{{/if}} {{#if this.cake}}
+        <h3>Cake: {{this.cake}}</h3>{{/if}}  --}}
 
     </div>
-    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
+</div>
 </div>
