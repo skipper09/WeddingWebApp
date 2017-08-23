@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "@bb33449966lp",
+    "password": "password",
     "database": "providers_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
