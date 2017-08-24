@@ -130,8 +130,12 @@ jQuery(document).ready(function($){
 	    return this;
 	};
 
-	$("#providerSubmit").on("submit", function() {
-		
+	// $("#providerSubmit").on("submit", function() {
 
-	})
+
+	// })
+
+	function capitalizeFirstLetter(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 });
