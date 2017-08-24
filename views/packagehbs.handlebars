@@ -1,91 +1,109 @@
+<div style ="padding-bottom: 60px"></div><br>
 <div class="container">
-    <div class="row" id="packages-row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <h2 class="text-center">Your Package</h2>
+<div class="row" id="packages-row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+    <div class="well well-lg">
+        <h2 class="text-center">Your Wedding Package</h2>
 
-            {{#unless package}}
-            <h3>It looks like you haven't created a package yet</h3>
-            <p>To begin creating your wedding package, head on over to <span><a href="/vendors">Choose Vendors</a></span> to see our curated list of vendors available in your area</p>
-            {{/unless}}
+        {{#unless package}}
+        <h3>It looks like you haven't created a package yet</h3>
+        <p>To begin creating your wedding package, head on over to <span><a href="/vendors">Choose Vendors</a></span> to see our curated list of vendors available in your area</p>
+        {{/unless}}
 
-            <br> {{#each package}} {{#if this.venue}}
+        <br>
+        {{#each package}} 
+            {{#if this.venue}}
             <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="/app/public/assets/images/venue/milestone.jpg" alt="">
-                    </a>
+                <div class="">
+                    <img class="media-object" src="{{this.venue.img}}" style="float: left; padding: 0px 20px">
                 </div>
-                <div class="media-body">
-                    <h4 class="media-heading">{{this.venue}}</h4>
-                </div>
+
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600">{{this.venue.name}} </h4>
+                <h4 class="media-heading">Price:{{this.venue.price}}</h4>
             </div>
-            {{/if}} {{#if this.photographers}}
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="/app/public/assets/images/photographers/brandi.jpg" alt="">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">{{this.photographers}}</h4>
-                </div>
+
             </div>
-            {{/if}} {{#if this.music}}
+
+            {{/if}}
+            {{#if this.photographer}}
             <div class="media">
-                <div class="media-left">
+                <div class="">
                     <a href="#">
-                        <img class="media-object" src="/app/public/assets/images/music/company.jpg" alt="">
+                        <img class="media-object" src="{{this.photographer.img}}" style="float: left; padding: 0px 20px">
                     </a>
                 </div>
-                <div class="media-body">
-                    <h4 class="media-heading">{{this.music}}</h4>
-                </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600"> {{this.photographer.name}}</h4>
+                <h4 class="media-heading">Price:{{this.photographer.price}}</h4>
             </div>
-            {{/if}} {{#if this.florist}}
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="/app/public/assets/images/florist/petal.jpg" alt="">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">{{this.florist}}</h4>
-                </div>
-            </div>
-            {{/if}} {{#if this.caterers}}
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="/app/public/assets/images/caterers/texas.jpg" alt="">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">{{this.caterers}}</h4>
-                </div>
-            </div>
-            {{/if}} {{#if this.cake}}
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="/app/public/assets/images/cake/sweetHeaven.jpg" alt="">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">{{this.cake}}</h4>
-                    <br>
-                </div>
             </div>
             {{/if}}
-
-            <form action="/package/delete/{{this.id}}?_method=DELETE" method="POST">
-                <input type="hidden" name="id" value="{{this.id}}">
-                <button class="btn btn-default">Contact vendors</button>
-                <button class="btn btn-default" type="submit">Delete this Package</button>
-            </form>
-
-            {{/each}}
+            {{#if this.music}}
+            <div class="media">
+                <div class="">
+                    <a href="#">
+                        <img class="media-object" src="{{this.music.img}}" style="float: left; padding: 0px 20px">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600"> {{this.music.name}}</h4>
+                <h4 class="media-heading">Price:{{this.music.price}}</h4>
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.florist}}
+            <div class="media">
+                <div class="">
+                    <a href="#">
+                        <img class="media-object" src="{{this.florist.img}}" style="float: left; padding: 0px 20px">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600"> {{this.florist.name}}</h4>
+               <h4 class="media-heading">Price:{{this.florist.price}}</h4> 
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.caterer}}
+            <div class="media">
+                <div class="">
+                    <a href="#">
+                        <img class="media-object" src="{{this.caterer.img}}" style="float: left; padding: 0px 20px">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600"> {{this.caterer.name}}</h4>
+               <h4 class="media-heading">Price:{{this.caterer.price}}</h4> 
+            </div>
+            </div>
+            {{/if}}
+            {{#if this.cake}}
+            <div class="media">
+                <div class="">
+                    <a href="#">
+                        <img class="media-object" src="{{this.cake.img}}"style="float: left; padding: 0px 85px; margin-left: 20px;">
+                    </a>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600"> {{this.cake.name}}</h4>
+                <h4 class="media-heading">Price:{{this.cake.price}}</h4>
+            </div>
+            </div>
+            {{/if}}      
+        {{/each}}
+        <div class="center" style="font-weight: 900"><br>
+        <h2 style="text-align: center">TOTAL PACKAGE: $
+        ${{price}}</h2><br>
+        <form action="/package/delete/{{this.id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button class="btn btn-default">Contact vendors</button>
+            <button class="btn btn-default" type="submit">Delete this Package</button>
+        </form>
         </div>
-        <div class="col-sm-2"></div>
     </div>
+    <div class="col-sm-2"></div>
+</div>
+</div>
 </div>
