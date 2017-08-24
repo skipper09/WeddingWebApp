@@ -4,7 +4,7 @@
 
 // Need to do an association with users?? or the other way around
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Packages = sequelize.define("Packages", {
         id: {
             type: DataTypes.INTEGER,
@@ -30,7 +30,25 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         }
     }, {
-        timestamps: false
-    });
+            timestamps: false
+        });
+
+    // Packages.associate = function (models) {
+    //     Packages.hasMany(models.Providers, {
+    //     });
+    // };
+
+    // Packages.associate = function(models) {
+    //     Packages.belongsTo(models.User, {
+    //       foreignKey: {
+    //         allowNull: false
+    //       }
+    //     });
+    //   };
+
+    // Packages.associate = function (models) {
+    //     Packages.hasOne(models.User, { foreignKey: 'user_id' })
+    // }
+
     return Packages;
 }

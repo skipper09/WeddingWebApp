@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/package", function (req, res) {
-        console.log('something');
+        // console.log(req._passport);
         db.Packages.findAll({})
             .then(function (results) {
                 var hbsObject = {
@@ -14,19 +14,25 @@ module.exports = function (app) {
     });
 
     app.post("/package/create", function (req, res) {
-        console.log(res);
+        console.log(req.body);
+        // console.log(req.user);
 
-        db.Packages.create({
-            venue: req.body.venue,
-            photographers: req.body.photographer,
-            caterers: req.body.caterers,
-            cake: req.body.cake,
-            music: req.body.music,
-            florist: req.body.florist
-        })
+        db.Packages.create(
+            req.body
+        )
             .then(function (result) {
                 res.redirect("/package");
             });
     });
+
+    app.delete("/package/delete/:id", function (req, res) {
+        db.Packages.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(results) {
+            res.redirect("/package")
+        });
+    })
 
 };

@@ -5,7 +5,7 @@ module.exports = function (app) {
     app.get("/vendors", function (req, res) {
         db.Providers.findAll({})
             .then(function (results) {
-                // console.log(results);
+                console.log(results);
                 // res.json(results);
                 var hbsObject = {
                     vendor: results
@@ -59,6 +59,17 @@ module.exports = function (app) {
             });
 
         }
+    });
+
+    app.get("/profile", function (req, res) {
+        // console.log('something');
+        db.user.findAll({})
+            .then(function (results) {
+                var hbsObject = {
+                    user: results
+                };
+                res.render("profile", hbsObject);
+            });
     });
 };
 
