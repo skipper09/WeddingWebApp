@@ -131,8 +131,6 @@ jQuery(document).ready(function($){
 	};
 
 	// $("#providerSubmit").on("submit", function() {
-
-
 	// })
 
 	function capitalizeFirstLetter(string) {

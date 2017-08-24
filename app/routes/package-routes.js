@@ -29,4 +29,14 @@ module.exports = function (app) {
             });
     });
 
+    app.delete("/package/delete/:id", function (req, res) {
+        db.Packages.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(results) {
+            res.redirect("/package")
+        });
+    })
+
 };

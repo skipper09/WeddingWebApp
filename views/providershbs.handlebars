@@ -1,22 +1,30 @@
-<div class="containter">
-<form method="POST" action="/package/create">
+<div class="container">
         <div class="row" id="providers-row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <h2 class="text-center">Choose Your Vendors</h2>
-                <div class="well well-lg">
+                <div>
+                    <br>
+                    <div>
+                    <p>Display by budget:  <span>
+                    <a href="/vendors/low"><button class="btn btn-default">Low</button></a>
+                    <a href="/vendors/medium"><button class="btn btn-default">Medium</button></a>
+                    <a href="/vendors/high"><button class="btn btn-default">High</button></a></span></p>
+                    </div>
+                <form method="POST" action="/package/create">
+                <div class="well">
                     <div class="row">
-                        <h1>Venues</h1>
+                        <h3>Venues</h3>
                         {{#each vendor}} {{#if_eq this.type 'venue'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}">
                                 <div class="caption">
-                                    <h3>{{this.name}}</h3>
-                                    <h4>Price: {{this.price}}</h4>
-                                    <h4>{{this.capacity}}</h4>
-                                    <h4>{{this.description}}</h4>
-                                    <h4>{{this.address}}</h4>
+                                    <h4>{{this.name}}</h4>
+                                    <p>Price: {{this.price}}</p>
+                                    <p>{{this.capacity}}</p>
+                                    <p>{{this.description}}</p>
+                                    <p>{{this.address}}</p>
                                     <br>
                                     <input type="radio" name="venue" value="{{this.name}}">
                                 </div>
@@ -29,17 +37,17 @@
 
                 <div class="well well-lg">
                     <div class="row">
-                        <h1>Photographers</h1>
+                        <h3>Photographers</h3>
                         {{#each vendor}} {{#if_eq this.type 'photographers'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}">
                                 <div class="caption">
-                                    <h3>{{this.name}}</h3>
-                                    <h4>Price: {{this.price}}</h4>
-                                    <h4>{{this.capacity}}</h4>
-                                    <h4>{{this.description}}</h4>
-                                    <h4>{{this.address}}</h4>
+                                    <h4>{{this.name}}</p>
+                                    <p>Price: {{this.price}}</p>
+                                    <p>{{this.capacity}}</p>
+                                    <p>{{this.description}}</p>
+                                    <p>{{this.address}}</p>
                                     <br>
                                     <input type="radio" name="photographers" value="{{this.name}}">
                                 </div>
@@ -49,18 +57,18 @@
                     </div>
                 </div>
 
-                <div class="well well-lg">
+                <div class="well">
                     <div class="row">
-                        <h1>Bands</h1>
+                        <h3>Bands</h3>
                         {{#each vendor}} {{#if_eq this.type 'music'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h3>{{this.name}}</h3>
-                                <h4>Price: {{this.price}}</h4>
-                                <h4>{{this.capacity}}</h4>
-                                <h4>{{this.description}}</h4>
-                                <h4>{{this.address}}</h4>
+                                <h4>{{this.name}}</h4>
+                                <p>Price: {{this.price}}</p>
+                                <p>{{this.capacity}}</p>
+                                <p>{{this.description}}</p>
+                                <p>{{this.address}}</p>
                                 <br>
                                 <input type="radio" name="music" value="{{this.name}}">
                             </div>
@@ -69,18 +77,18 @@
                     </div>
                 </div>
 
-                <div class="well well-lg">
+                <div class="well">
                     <div class="row">
-                        <h1>Florists</h1>
+                        <h3>Florists</h3>
                         {{#each vendor}} {{#if_eq this.type 'florist'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h3>{{this.name}}</h3>
-                                <h4>Price: {{this.price}}</h4>
-                                <h4>{{this.capacity}}</h4>
-                                <h4>{{this.description}}</h4>
-                                <h4>{{this.address}}</h4>
+                                <h4>{{this.name}}</h4>
+                                <p>Price: {{this.price}}</p>
+                                <p>{{this.capacity}}</p>
+                                <p>{{this.description}}</p>
+                                <p>{{this.address}}</p>
                                 <br>
                                 <input type="radio" name="florist" value="{{this.name}}">
                             </div>
@@ -89,18 +97,18 @@
                     </div>
                 </div>
 
-                <div class="well well-lg">
+                <div class="well">
                     <div class="row">
-                        <h1>Caterers</h1>
+                        <h3>Caterers</h3>
                         {{#each vendor}} {{#if_eq this.type 'caterers'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h3>{{this.name}}</h3>
-                                <h4>Price: {{this.price}}</h4>
-                                <h4>{{this.capacity}}</h4>
-                                <h4>{{this.description}}</h4>
-                                <h4>{{this.address}}</h4>
+                                <h4>{{this.name}}</h4>
+                                <p>Price: {{this.price}}</p>
+                                <p>{{this.capacity}}</p>
+                                <p>{{this.description}}</p>
+                                <p>{{this.address}}</p>
                                 <br>
                                 <input type="radio" name="caterers" value="{{this.name}}">
                             </div>
@@ -109,18 +117,18 @@
                     </div>
                 </div>
 
-                <div class="well well-lg">
+                <div class="well">
                     <div class="row">
-                        <h1>Cake</h1>
+                        <h3>Cake</h3>
                         {{#each vendor}} {{#if_eq this.type 'cake'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h3>{{this.name}}</h3>
-                                <h4>Price: {{this.price}}</h4>
-                                <h4>{{this.capacity}}</h4>
-                                <h4>{{this.description}}</h4>
-                                <h4>{{this.address}}</h4>
+                                <h4>{{this.name}}</h4>
+                                <p>Price: {{this.price}}</p>
+                                <p>{{this.capacity}}</p>
+                                <p>{{this.description}}</p>
+                                <p>{{this.address}}</p>
                                 <br>
                                 <input type="radio" name="cake" value="{{this.name}}">
                             </div>
@@ -128,7 +136,7 @@
                         {{/if_eq}} {{/each}}
                     </div>
                 </div>
-                <input id="providerSubmit" type="submit">
+                <input id="providerSubmit" class="btn btn-default" type="submit">
     </form>
     </div>
     <div class="col-sm-1"></div>
