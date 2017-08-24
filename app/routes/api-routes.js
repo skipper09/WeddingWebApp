@@ -5,7 +5,7 @@ module.exports = function (app) {
     app.get("/vendors", function (req, res) {
         db.Providers.findAll({})
             .then(function (results) {
-                // console.log(results);
+                console.log(results);
                 // res.json(results);
                 var hbsObject = {
                     vendor: results
