@@ -7,8 +7,6 @@
             {{#unless package}}
             <h3>It looks like you haven't created a package yet</h3>
             <p>To begin creating your wedding package, head on over to <span><a href="/vendors">Choose Vendors</a></span> to see our curated list of vendors available in your area</p>
-
-
             {{/unless}}
 
 
@@ -48,7 +46,7 @@
                     ...
                 </div>
             </div>
-            {{/if}} {{#if this.florists}}
+            {{/if}} {{#if this.florist}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
@@ -56,7 +54,7 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">{{this.florists}}</h4>
+                    <h4 class="media-heading">{{this.florist}}</h4>
                     ...
                 </div>
             </div>
@@ -85,13 +83,14 @@
                 </div>
             </div>
             {{/if}}
-
-            <button class="btn btn-default">Contact vendors</button> 
-            {{!-- <button>Update</button> --}}
+    
+            
             <form action="/package/delete/{{this.id}}?_method=DELETE" method="POST">
                 <input type="hidden" name="id" value="{{this.id}}">
+                <button class="btn btn-default">Contact vendors</button>
                 <button class="btn btn-default" type="submit">Delete this Package</button>
             </form>
+
             {{/each}}
         </div>
         <div class="col-sm-2"></div>

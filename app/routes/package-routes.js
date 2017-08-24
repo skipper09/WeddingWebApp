@@ -18,7 +18,7 @@ module.exports = function (app) {
 
         db.Packages.create({
             venue: req.body.venue,
-            photographers: req.body.photographer,
+            photographers: req.body.photographers,
             caterers: req.body.caterers,
             cake: req.body.cake,
             music: req.body.music,
