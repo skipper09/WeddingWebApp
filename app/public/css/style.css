@@ -24,7 +24,7 @@ body {
 a {
   color: #66c9dd;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 img {
@@ -34,12 +34,12 @@ img {
 
 .header h2 {
   font-family: Cookie;
-  font-size: 24px;
+  font-size: 54px;
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
   line-height: 26.4px;
-  padding-top: 100px;
+  padding-top: 80px;
   color: #66c9dd;
 }
 
