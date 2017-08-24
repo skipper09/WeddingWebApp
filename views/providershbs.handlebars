@@ -1,32 +1,37 @@
+<div style ="padding-bottom: 100px"></div>
 <div class="container">
         <div class="row" id="providers-row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-                <h2 class="text-center">Choose Your Vendors</h2>
                 <div>
                     <br>
                     <div>
-                    <p>Display by budget:  <span>
-                    <a href="/vendors/low"><button class="btn btn-default">Low</button></a>
-                    <a href="/vendors/medium"><button class="btn btn-default">Medium</button></a>
-                    <a href="/vendors/high"><button class="btn btn-default">High</button></a></span></p>
+                    <p>Display by budget:  
+                        <a href="/vendors/low"><button class="btn btn-default">Low</button></a>
+                        <a href="/vendors/medium"><button class="btn btn-default">Medium</button></a>
+                        <a href="/vendors/high"><button class="btn btn-default">High</button></a>
+                        <a href="/vendors"><button class="btn btn-default">All</button></a></span></p>
                     </div>
                 <form method="POST" action="/package/create">
                 <div class="well">
                     <div class="row">
-                        <h3>Venues</h3>
+                        <h2 class="text-center">Vendor Selections</h2>
+                        <br>
                         {{#each vendor}} {{#if_eq this.type 'venue'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}">
                                 <div class="caption">
-                                    <h4>{{this.name}}</h4>
-                                    <p>Price: {{this.price}}</p>
-                                    <p>{{this.capacity}}</p>
-                                    <p>{{this.description}}</p>
-                                    <p>{{this.address}}</p>
+                                    <h3 style="text-align: center">{{this.name}}</h3>
+                                    <h4>{{this.address}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h3 style="text-align: center">Price: {{this.price}}</h3>
+                                    <h4 style="text-align: center">{{this.capacity}}</h4>
                                     <br>
-                                    <input type="radio" name="venue" value="{{this.name}}">
+                                    <center>
+                                    <input type="radio" name="venue" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                                    <p style="font-size: 8px; text-align: center;"><i>click to choose this venue</i></p>
+                                    </center>
                                 </div>
                             </div>
                         </div>
@@ -37,19 +42,23 @@
 
                 <div class="well well-lg">
                     <div class="row">
-                        <h3>Photographers</h3>
+                        <h2 class="text-center">Photographer Selections</h2>
+                        <br>
                         {{#each vendor}} {{#if_eq this.type 'photographers'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
                                 <img src="{{this.img}}" alt="{{this.img}}">
                                 <div class="caption">
-                                    <h4>{{this.name}}</p>
-                                    <p>Price: {{this.price}}</p>
-                                    <p>{{this.capacity}}</p>
-                                    <p>{{this.description}}</p>
-                                    <p>{{this.address}}</p>
+                                    <h3 style="text-align: center">{{this.name}}</h3>
+                                    <h4 style="text-align: center">{{this.address}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h3 style="text-align: center">Price: {{this.price}}</h3>
+                                    <h4 style="text-align: center">{{this.capacity}}</h4>
                                     <br>
-                                    <input type="radio" name="photographers" value="{{this.name}}">
+                                    <center>
+                                    <input type="radio" name="photographers" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                                    <p style="font-size: 8px; text-align: center;"><i>click to choose this photographer</i></p>
+                                    </center>
                                 </div>
                             </div>
                         </div>
@@ -59,18 +68,23 @@
 
                 <div class="well">
                     <div class="row">
-                        <h3>Bands</h3>
+                        <h2 class="text-center">Band Selections</h2>
+                        <br>
                         {{#each vendor}} {{#if_eq this.type 'music'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
-                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h4>{{this.name}}</h4>
-                                <p>Price: {{this.price}}</p>
-                                <p>{{this.capacity}}</p>
-                                <p>{{this.description}}</p>
-                                <p>{{this.address}}</p>
-                                <br>
-                                <input type="radio" name="music" value="{{this.name}}">
+                                <img src="{{this.img}}" alt="{{this.img}}" 
+                                <div class="caption">
+                                    <h3 style="text-align: center">{{this.name}}</h3>
+                                    <h4 style="text-align: center">{{this.address}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h3 style="text-align: center">Price: {{this.price}}</h3>
+                                    <h4 style="text-align: center">{{this.capacity}}</h4>
+                                    <br>
+                                <center>
+                                    <input type="radio" name="music" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                                    <p style="font-size: 8px; text-align: center;"><i>click to choose this vendor</i></p>
+                                    </center>
                             </div>
                         </div>
                         {{/if_eq}} {{/each}}
@@ -79,18 +93,22 @@
 
                 <div class="well">
                     <div class="row">
-                        <h3>Florists</h3>
+                        <h2 class="text-center">Florist Selections</h2>
+                        <br>
                         {{#each vendor}} {{#if_eq this.type 'florist'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
-                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h4>{{this.name}}</h4>
-                                <p>Price: {{this.price}}</p>
-                                <p>{{this.capacity}}</p>
-                                <p>{{this.description}}</p>
-                                <p>{{this.address}}</p>
-                                <br>
-                                <input type="radio" name="florist" value="{{this.name}}">
+                                <img src="{{this.img}}" alt="{{this.img}}" 
+                                <div class="caption">
+                                    <h3 style="text-align: center">{{this.name}}</h3>
+                                    <h4 style="text-align: center">{{this.address}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h3 style="text-align: center">Price: {{this.price}}</h3>
+                                    <h4 style="text-align: center">{{this.capacity}}</h4>
+                                    <br>
+                                <center>
+                                    <input type="radio" name="florist" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                                    <p style="font-size: 8px; text-align: center;"><i>click to choose this florist</i></p>
                             </div>
                         </div>
                         {{/if_eq}} {{/each}}
@@ -99,18 +117,22 @@
 
                 <div class="well">
                     <div class="row">
-                        <h3>Caterers</h3>
+                        <h2 class="text-center">Caterer Selections</h2>
+                        <br>
                         {{#each vendor}} {{#if_eq this.type 'caterers'}}
-                        <div class="col-sm-4">
+                         <div class="col-sm-4">
                             <div class="thumbnail">
-                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h4>{{this.name}}</h4>
-                                <p>Price: {{this.price}}</p>
-                                <p>{{this.capacity}}</p>
-                                <p>{{this.description}}</p>
-                                <p>{{this.address}}</p>
-                                <br>
-                                <input type="radio" name="caterers" value="{{this.name}}">
+                                <img src="{{this.img}}" alt="{{this.img}}" 
+                                <div class="caption">
+                                    <h3 style="text-align: center">{{this.name}}</h3>
+                                    <h4 style="text-align: center">{{this.address}}</h4>
+                                    <h4>{{this.description}}</h4>
+                                    <h3 style="text-align: center">Price: {{this.price}}</h3>
+                                    <h4 style="text-align: center">{{this.capacity}}</h4>
+                                    <br>
+                                <center>
+                                    <input type="radio" name="caterers" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                                    <p style="font-size: 8px; text-align: center;"><i>click to choose this caterer</i></p>
                             </div>
                         </div>
                         {{/if_eq}} {{/each}}
@@ -119,18 +141,20 @@
 
                 <div class="well">
                     <div class="row">
-                        <h3>Cake</h3>
+                        <h2 class="text-center">Cake Selections</h2>
+                        <br>
                         {{#each vendor}} {{#if_eq this.type 'cake'}}
                         <div class="col-sm-4">
                             <div class="thumbnail">
-                                <img src="{{this.img}}" alt="{{this.img}}" height="30%">
-                                <h4>{{this.name}}</h4>
-                                <p>Price: {{this.price}}</p>
-                                <p>{{this.capacity}}</p>
-                                <p>{{this.description}}</p>
-                                <p>{{this.address}}</p>
-                                <br>
-                                <input type="radio" name="cake" value="{{this.name}}">
+                                <img src="{{this.img}}" alt="{{this.img}}"
+                                <div class="caption">
+                                    <h3 style="text-align: center">{{this.name}}</h3>
+                                    <h4>{{this.description}}</h4>
+                                    <h3 style="text-align: center">Price: {{this.price}}</h3>
+                                    <h4 style="text-align: center">{{this.capacity}}</h4>
+                                <center>
+                                    <input type="radio" name="cake" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                                    <p style="font-size: 8px; text-align: center;"><i>click to choose this bakery</i></p>
                             </div>
                         </div>
                         {{/if_eq}} {{/each}}
