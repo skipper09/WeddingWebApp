@@ -9,82 +9,75 @@
             <p>To begin creating your wedding package, head on over to <span><a href="/vendors">Choose Vendors</a></span> to see our curated list of vendors available in your area</p>
             {{/unless}}
 
-
             <br> {{#each package}} {{#if this.venue}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="..." alt="...">
+                        <img class="media-object" src="/app/public/assets/images/venue/milestone.jpg" alt="">
                     </a>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{this.venue}}</h4>
-                    ...
                 </div>
             </div>
             {{/if}} {{#if this.photographers}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="..." alt="...">
+                        <img class="media-object" src="/app/public/assets/images/photographers/brandi.jpg" alt="">
                     </a>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{this.photographers}}</h4>
-                    ...
                 </div>
             </div>
             {{/if}} {{#if this.music}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="..." alt="...">
+                        <img class="media-object" src="/app/public/assets/images/music/company.jpg" alt="">
                     </a>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{this.music}}</h4>
-                    ...
                 </div>
             </div>
             {{/if}} {{#if this.florist}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="..." alt="...">
+                        <img class="media-object" src="/app/public/assets/images/florist/petal.jpg" alt="">
                     </a>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{this.florist}}</h4>
-                    ...
                 </div>
             </div>
             {{/if}} {{#if this.caterers}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="..." alt="...">
+                        <img class="media-object" src="/app/public/assets/images/caterers/texas.jpg" alt="">
                     </a>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{this.caterers}}</h4>
-                    ...
                 </div>
             </div>
             {{/if}} {{#if this.cake}}
             <div class="media">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="..." alt="...">
+                        <img class="media-object" src="/app/public/assets/images/cake/sweetHeaven.jpg" alt="">
                     </a>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{this.cake}}</h4>
-                    ...
+                    <br>
                 </div>
             </div>
             {{/if}}
-    
-            
+
             <form action="/package/delete/{{this.id}}?_method=DELETE" method="POST">
                 <input type="hidden" name="id" value="{{this.id}}">
                 <button class="btn btn-default">Contact vendors</button>

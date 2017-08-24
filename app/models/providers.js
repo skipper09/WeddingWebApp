@@ -33,7 +33,16 @@ module.exports = function(sequelize, Sequelize) {
     },{
         timestamps: false
     });
-        return (Providers);
+
+    // Providers.associate = function(models) {
+    //     Providers.belongsTo(models.Packages, {
+    //     //   foreignKey: {
+    //     //     allowNull: true
+    //     //   }
+    //     });
+    //   };
+
+    return (Providers);
 };
 
 
