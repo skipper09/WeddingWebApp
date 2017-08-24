@@ -11,9 +11,9 @@ p {
   line-height: 1.75; }
 
 a {
-  color: #fed136; }
+  color: #66c9dd; }
   a.active, a:active, a:focus, a:hover {
-    color: #fec503; }
+    color: #66c9dd; }
 
 h1,
 h2,
@@ -115,7 +115,7 @@ body {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("/assets/images/somethingBluelogo.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
