@@ -91,17 +91,17 @@
                 <h4 class="media-heading">Price:{{this.cake.price}}</h4>
             </div>
             </div>
-            {{/if}}      
+            {{/if}}  
+            <div class="center" style="font-weight: 900"><br>
+            <h2 style="text-align: center">TOTAL PACKAGE: $
+            ${{price}}</h2><br>
+            <form action="/package/delete/{{this.id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button class="btn btn-default">Contact vendors</button>
+                <button class="btn btn-default" type="submit">Delete this Package</button>
+            </form>
+            </div>    
         {{/each}}
-        <div class="center" style="font-weight: 900"><br>
-        <h2 style="text-align: center">TOTAL PACKAGE: $
-        ${{price}}</h2><br>
-        <form action="/package/delete/{{this.id}}?_method=DELETE" method="POST">
-            <input type="hidden" name="id" value="{{this.id}}">
-            <button class="btn btn-default">Contact vendors</button>
-            <button class="btn btn-default" type="submit">Delete this Package</button>
-        </form>
-        </div>
     </div>
     <div class="col-sm-2"></div>
 </div>
