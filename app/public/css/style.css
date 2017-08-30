@@ -11,18 +11,20 @@ Primary style
 
 html {
   font-size: 62.5%;
+  color: #66c9dd;
 }
 
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #2c343b;
-  background-color: #f2f2f2;
+  background-color: #fff;
 }
 
 a {
-  color: #d44457;
+  color: #66c9dd;
   text-decoration: none;
+  font-size: 16px;
 }
 
 img {
@@ -30,17 +32,27 @@ img {
 }
 
 
-.headerh2 {
+.header h2 {
   font-family: Cookie;
-  font-size: 24px;
+  font-size: 54px;
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
   line-height: 26.4px;
-  padding-top: 100px;
-  font-color: #66c9dd;
+  padding-top: 80px;
+  color: #66c9dd;
 }
 
+input[type="submit"] {
+   display: block;
+   background: #66c9dd;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   -moz-border-radius: 2px;
+   border-radius: 2px;
+   cursor: pointer;
+ }
 
 /* -------------------------------- 
 
@@ -53,7 +65,7 @@ Main Components
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 100px;
   background-color: #21272c;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -84,7 +96,7 @@ Main Components
   margin-right: 5%;
   width: 44px;
   height: 100%;
-  background: url("../assets/cd-icon-menu.svg") no-repeat center center;
+  background: url("assets/images/somethingBluelogo.png") no-repeat center center;
 }
 .cd-primary-nav ul {
   position: absolute;
@@ -112,7 +124,7 @@ Main Components
   padding-left: 5%;
   background: #21272c;
   border-top: 1px solid #333c44;
-  color: #ffffff;
+  color: #66c9dd;
 }
 @media only screen and (min-width: 768px) {
   .cd-primary-nav {
@@ -617,7 +629,7 @@ Slider navigation
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: url(../assets/cd-icon-navigation.svg) no-repeat 0 0;
+  background: url(assets/images/somethingBluelogo.png) no-repeat 0 0;
 }
 .no-touch .cd-slider-nav a:hover {
   background-color: rgba(0, 1, 1, 0.5);
@@ -711,3 +723,21 @@ Javascript disabled
 .no-js .cd-slider-nav {
   display: none;
 }
+
+.thumbnail {
+  box-shadow: 3px 3px 3px #888;
+  height: 540px;
+}
+
+.thumbnail h4 {
+  font-size: 14px;
+}
+
+.thumbnail h3 {
+  font-weight: 600;
+}
+
+.thumbnail img {
+  padding: 10px 10px;
+}
+
