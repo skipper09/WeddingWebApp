@@ -25,11 +25,13 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign Up</a>
-                    <!-- <a href="#0">Sign Up</a> -->
+                   <!-- <a href="#0">Sign Up</a> -->
                 </li>
                 <li><a href="#" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">Sign In</a>
 					<!-- <a href="#0">Sign In</a> -->
-				</li>
+                </li>
+                <li><a href="#" onclick="document.getElementById('proRegister').style.display='block'" style="width:auto;">ProRegister</a>
+                </li>
 			</ul>
 		</nav> <!-- .cd-primary-nav -->
 	</header>
@@ -74,7 +76,7 @@
 			<!-- </li> -->
 
 			<li class="cd-bg-video selected">
-				<div class="cd-full-width">
+				<div class="cd-full-width selected">
 				<h2 style = "color: #66c9dd; font-size: 48px; padding-top: 100px; ">Something old, something new, something borrowed, <br>something blue</h2>
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p> -->
                     <!-- <a href="#0" class="cd-btn">Learn more</a> -->
@@ -153,7 +155,7 @@
         </form>
     </div>
     <div id="proRegister" class="modal">
-        <span onclick="document.getElementById('proRegister').style.display='none'">×</span>
+        <span onclick="document.getElementById('proRegister').style.display='none'" class="close" title="Close Modal">×</span>
         <form id="registerProForm" class="modal-content animate">
             <div class="container">
                 <label><b>Service</b></label>
