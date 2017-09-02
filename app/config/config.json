@@ -1,32 +1,7 @@
-<<<<<<< HEAD
 {
   "development": {
     "username": "root",
-    "password": "@bb33449966lp",
-    "database": "providers_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
     "password": "password",
-    "database": "providers_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": "password",
-    "database": "providers_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
-=======
-{
-  "development": {
-    "username": "root",
-    "password": "pw",
     "database": "providers_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -43,4 +18,3 @@
     "dialect": "mysql"
   }
 }
->>>>>>> 2ee53928e411b9c86f43da5a2d1f5aaa6a976334

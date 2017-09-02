@@ -3,7 +3,6 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/package", function (req, res) {
-<<<<<<< HEAD
         db.Packages.findAll({
             include: ['venue', 'photographer', 'music', 'florist', 'caterer', 'cake'],
         }).then(function (results) {
@@ -29,23 +28,12 @@ module.exports = function (app) {
             };
             res.render("packagehbs", hbsObject);
         });
-=======
-        // console.log(req._passport);
-        db.Packages.findAll({})
-            .then(function (results) {
-                var hbsObject = {
-                    package: results
-                };
-                res.render("packagehbs", hbsObject);
-            });
->>>>>>> 2ee53928e411b9c86f43da5a2d1f5aaa6a976334
     });
 
     app.post("/package/create", function (req, res) {
         console.log(req.body);
         // console.log(req.user);
 
-<<<<<<< HEAD
         db.Packages.create({
             venueId: req.body.venue,
             photographerId: req.body.photographer,
@@ -54,11 +42,6 @@ module.exports = function (app) {
             musicId: req.body.music,
             floristId: req.body.florist
         })
-=======
-        db.Packages.create(
-            req.body
-        )
->>>>>>> 2ee53928e411b9c86f43da5a2d1f5aaa6a976334
             .then(function (result) {
                 res.redirect("/package");
             });

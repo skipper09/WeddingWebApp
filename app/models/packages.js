@@ -30,7 +30,6 @@ module.exports = function (sequelize, DataTypes) {
         //     type: DataTypes.STRING
         // }
     }, {
-<<<<<<< HEAD
         timestamps: false
     });
 
@@ -80,27 +79,6 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
 
-=======
-            timestamps: false
-        });
-
-    // Packages.associate = function (models) {
-    //     Packages.hasMany(models.Providers, {
-    //     });
-    // };
-
-    // Packages.associate = function(models) {
-    //     Packages.belongsTo(models.User, {
-    //       foreignKey: {
-    //         allowNull: false
-    //       }
-    //     });
-    //   };
-
-    // Packages.associate = function (models) {
-    //     Packages.hasOne(models.User, { foreignKey: 'user_id' })
-    // }
->>>>>>> 2ee53928e411b9c86f43da5a2d1f5aaa6a976334
 
     return Packages;
 }
